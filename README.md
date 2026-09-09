@@ -1,12 +1,16 @@
-# The Art Garden — Netlify deployment
+# The Art Garden — Netlify Deployment Package
 
-This package is the cleaned production-ready static site.
+This version is structured to match the current GitHub repository:
+- `index.html`, `styles.css`, `script.js`, `events.json`, `netlify.toml` at the root
+- all original uploaded photos at the root
+- `art-garden-logo.png` is a clean crop of the supplied Art Garden logo screenshot
 
-## Deploy
-Upload the contents of this folder to GitHub (not the ZIP itself). The repository root should contain `index.html`, `styles.css`, `script.js`, `events.json`, `netlify.toml`, and `assets/`.
+## Netlify
+Build command: leave blank
+Publish directory: `.`
 
-## Edit events
-Edit `events.json` in GitHub. Each event supports:
+## Editing events
+Edit `events.json`. Each event supports:
 - title
 - subtitle
 - date
@@ -15,16 +19,13 @@ Edit `events.json` in GitHub. Each event supports:
 - price
 - image
 - bookingUrl
-- active (true/false)
+- active
 
-Set `active` to `false` to hide an event without deleting it.
-
-## Social links
-Replace the three placeholder URLs in `index.html` with your real Instagram, Facebook, and TikTok URLs. WhatsApp is already linked to +1 (868) 290-4271.
+Set `active` to `false` to hide an event.
 
 ## Contact
-Phone: +1 (868) 290-4271
 Email: theartgardentt@gmail.com
+Phone: +1 (868) 290-4271
+WhatsApp: +1 (868) 290-4271
 
-## Netlify
-After pushing to GitHub, import the repository into Netlify. Build command: leave blank. Publish directory: `.`. Then connect `theart.garden` under Domain management.
+Instagram, Facebook, and TikTok are left as clearly marked placeholders in `index.html` until the real URLs are supplied.

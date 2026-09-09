@@ -6,7 +6,7 @@
     "time": "7:30 PM – 12:00 AM",
     "location": "The Art Garden",
     "price": "$200",
-    "image": "assets/IMG_9448.png",
+    "image": "IMG_9448.png",
     "bookingUrl": "https://theart.garden/",
     "active": true
   },
@@ -17,7 +17,7 @@
     "time": "7:30 PM – 12:00 AM",
     "location": "The Art Garden",
     "price": "$250",
-    "image": "assets/IMG_9450.png",
+    "image": "IMG_9450.png",
     "bookingUrl": "https://theart.garden/",
     "active": true
   }
