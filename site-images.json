@@ -1,0 +1,72 @@
+{
+  "images": {
+    "hero": {
+      "image": "IMG_1585.jpeg",
+      "position": "center 55%"
+    },
+    "experience_people": {
+      "image": "IMG_5763.jpeg",
+      "position": "center 72%"
+    },
+    "experience_space": {
+      "image": "IMG_2963.jpeg",
+      "position": "center 50%"
+    },
+    "experience_music": {
+      "image": "IMG_9041.jpeg",
+      "position": "center 55%"
+    },
+    "experience_community": {
+      "image": "IMG_8029.jpeg",
+      "position": "center 62%"
+    },
+    "private_events": {
+      "image": "IMG_8544.jpeg",
+      "position": "center 58%"
+    },
+    "corporate": {
+      "image": "685F956E-5AAB-46BF-B3B1-FA2C5230C740.jpeg",
+      "position": "center 78%"
+    },
+    "academy_one": {
+      "image": "IMG_8554.jpeg",
+      "position": "center 52%"
+    },
+    "academy_two": {
+      "image": "IMG_8550.jpeg",
+      "position": "center 52%"
+    },
+    "studio_live": {
+      "image": "BD3182D8-50B3-4203-87F4-9224501A1D22.jpeg",
+      "position": "center 58%"
+    },
+    "studio_art": {
+      "image": "IMG_9008.jpeg",
+      "position": "center 50%"
+    },
+    "artist": {
+      "image": "IMG_9130.jpeg",
+      "position": "center 45%"
+    },
+    "gallery_people": {
+      "image": "IMG_5763.jpeg",
+      "position": "center 72%"
+    },
+    "gallery_art": {
+      "image": "IMG_9008.jpeg",
+      "position": "center 50%"
+    },
+    "gallery_event": {
+      "image": "IMG_9025.jpeg",
+      "position": "center 60%"
+    },
+    "gallery_corporate": {
+      "image": "685F956E-5AAB-46BF-B3B1-FA2C5230C740.jpeg",
+      "position": "center 78%"
+    },
+    "booking": {
+      "image": "IMG_1585.jpeg",
+      "position": "center 55%"
+    }
+  }
+}

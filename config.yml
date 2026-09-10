@@ -30,6 +30,7 @@ collections:
               - { label: "Location", name: "location", widget: "string", default: "The Art Garden" }
               - { label: "Price", name: "price", widget: "string" }
               - { label: "Event Photo", name: "image", widget: "image", media_folder: "/uploads", public_folder: "/uploads" }
+              - { label: "Photo Focus", name: "position", widget: "select", default: "center 55%", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"] }
               - { label: "Registration / Booking Link", name: "bookingUrl", widget: "string", required: false }
               - { label: "Show on Website", name: "active", widget: "boolean", default: true }
 
@@ -53,3 +54,34 @@ collections:
           - { label: "Academy URL", name: "academyUrl", widget: "string", required: false }
           - { label: "Studio URL", name: "studioUrl", widget: "string", required: false }
           - { label: "Collaboration URL", name: "collaborateUrl", widget: "string", required: false }
+
+
+  - name: "images"
+    label: "Photos & Cropping"
+    description: "Replace website photos and choose which part of each photo stays visible when cropped."
+    files:
+      - label: "Website Photos"
+        name: "images"
+        file: "site-images.json"
+        fields:
+          - label: "Images"
+            name: "images"
+            widget: "object"
+            fields:
+              - { label: "Hero Photo", name: "hero", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center 55%" } ] }
+              - { label: "Experience — People", name: "experience_people", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center 72%" } ] }
+              - { label: "Experience — Space", name: "experience_space", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Experience — Music", name: "experience_music", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Experience — Community", name: "experience_community", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Private Events", name: "private_events", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Corporate", name: "corporate", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center bottom" } ] }
+              - { label: "Academy — Photo 1", name: "academy_one", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Academy — Photo 2", name: "academy_two", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Studio — Live", name: "studio_live", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Studio — Art", name: "studio_art", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Artist", name: "artist", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Gallery — People", name: "gallery_people", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center bottom" } ] }
+              - { label: "Gallery — Art", name: "gallery_art", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Gallery — Event", name: "gallery_event", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }
+              - { label: "Gallery — Corporate", name: "gallery_corporate", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center bottom" } ] }
+              - { label: "Booking Background", name: "booking", widget: "object", fields: [ { label: "Image", name: "image", widget: "image" }, { label: "Photo Focus", name: "position", widget: "select", options: ["left top", "center top", "right top", "left center", "center center", "right center", "left bottom", "center bottom", "right bottom"], default: "center center" } ] }

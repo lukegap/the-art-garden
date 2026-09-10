@@ -36,3 +36,6 @@ The event editor controls each event's own registration/booking URL.
 
 
 Favicon: The supplied transparent Art Garden logo is used for browser tabs and Apple touch icons.
+
+
+Photo editing: the CMS includes a Photos & Cropping section. You can replace images and choose the focal area used by the website crop. Event photos also have a Photo Focus control.

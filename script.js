@@ -1,6 +1,7 @@
 /* THE ART GARDEN — NO-CODE CONTENT */
 const EVENTS_URL = "events.json";
 const SETTINGS_URL = "site-settings.json";
+const IMAGES_URL = "site-images.json";
 
 function safeUrl(value) {
   return value || "#";
@@ -17,7 +18,7 @@ function renderEvents(data) {
     card.className = "event-card";
     card.innerHTML = `
       <div class="event-art">
-        <img src="${safeUrl(event.image)}" alt="Photo from ${event.title}">
+        <img src="${safeUrl(event.image)}" alt="Photo from ${event.title}" style="object-position:${event.position || "center 50%"}">
       </div>
       <div class="event-info">
         <span class="eyebrow">UPCOMING EVENT</span>
@@ -115,3 +116,17 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 const header = document.querySelector(".site-header");
 document.querySelector(".menu-toggle").addEventListener("click", () => header.classList.toggle("open"));
 document.querySelectorAll(".site-header nav a").forEach(a => a.addEventListener("click", () => header.classList.remove("open")));
+
+
+fetch(IMAGES_URL)
+  .then(r => r.ok ? r.json() : Promise.reject(new Error("Could not load site-images.json")))
+  .then(data => {
+    const images = data?.images || {};
+    Object.entries(images).forEach(([key, cfg]) => {
+      document.querySelectorAll(`[data-image-key="${key}"]`).forEach(img => {
+        if (cfg.image) img.src = cfg.image;
+        if (cfg.position) img.style.objectPosition = cfg.position;
+      });
+    });
+  })
+  .catch(err => console.error(err));
