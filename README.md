@@ -39,3 +39,15 @@ Favicon: The supplied transparent Art Garden logo is used for browser tabs and A
 
 
 Photo editing: the CMS includes a Photos & Cropping section. You can replace images and choose the focal area used by the website crop. Event photos also have a Photo Focus control.
+
+## Final deployment package
+
+This package contains the complete static Art Garden website plus the editable Decap CMS under `/admin/`.
+
+- Public website entry point: `/index.html`
+- Editable CMS: `/admin/`
+- CMS content: `events.json`, `site-settings.json`, `site-images.json`
+- Uploaded event photos: `/uploads/`
+- CMS GitHub production branch: `cloudflare-production`
+- Static hosting: Cloudflare Pages (Framework preset: None; Build command: blank; Output directory: `.`)
+- The original site design, copy, user-supplied photography, event content, links, cropping controls, and branding are included.
