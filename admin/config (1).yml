@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: lukegap/the-art-garden
-  branch: cloudflare-production
+  branch: main
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -24,28 +24,40 @@ collections:
               - label: "Title"
                 name: "title"
                 widget: "string"
+
               - label: "Subtitle"
                 name: "subtitle"
                 widget: "string"
                 required: false
+
               - label: "Date"
                 name: "date"
                 widget: "string"
+
               - label: "Time"
                 name: "time"
                 widget: "string"
+                required: false
+
               - label: "Location"
                 name: "location"
                 widget: "string"
+                required: false
+
               - label: "Price"
                 name: "price"
                 widget: "string"
-              - label: "Image"
+                required: false
+
+              - label: "Event Image"
                 name: "image"
                 widget: "image"
-              - label: "Image position"
+                required: false
+
+              - label: "Image Position"
                 name: "position"
                 widget: "select"
+                required: false
                 options:
                   - "left top"
                   - "center top"
@@ -57,10 +69,12 @@ collections:
                   - "center bottom"
                   - "right bottom"
                 default: "center center"
+
               - label: "Booking URL"
                 name: "bookingUrl"
                 widget: "string"
                 required: false
+
               - label: "Active"
                 name: "active"
                 widget: "boolean"
@@ -78,46 +92,57 @@ collections:
             name: "phone"
             widget: "string"
             required: false
+
           - label: "Email"
             name: "email"
             widget: "string"
             required: false
+
           - label: "WhatsApp"
             name: "whatsapp"
             widget: "string"
             required: false
+
           - label: "Instagram"
             name: "instagram"
             widget: "string"
             required: false
+
           - label: "Facebook"
             name: "facebook"
             widget: "string"
             required: false
+
           - label: "TikTok"
             name: "tiktok"
             widget: "string"
             required: false
+
           - label: "Book Now URL"
             name: "bookNowUrl"
             widget: "string"
             required: false
+
           - label: "Private Events URL"
             name: "privateEventsUrl"
             widget: "string"
             required: false
+
           - label: "Corporate URL"
             name: "corporateUrl"
             widget: "string"
             required: false
+
           - label: "Academy URL"
             name: "academyUrl"
             widget: "string"
             required: false
+
           - label: "Studio URL"
             name: "studioUrl"
             widget: "string"
             required: false
+
           - label: "Collaborate URL"
             name: "collaborateUrl"
             widget: "string"
@@ -141,6 +166,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Experience — People"
             name: "experience_people"
             widget: "object"
@@ -151,6 +178,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Experience — Space"
             name: "experience_space"
             widget: "object"
@@ -161,6 +190,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Experience — Music"
             name: "experience_music"
             widget: "object"
@@ -171,6 +202,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Experience — Community"
             name: "experience_community"
             widget: "object"
@@ -181,6 +214,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Private Events"
             name: "private_events"
             widget: "object"
@@ -191,6 +226,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Corporate"
             name: "corporate"
             widget: "object"
@@ -201,7 +238,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Academy One"
+                default: "center center"
+
+          - label: "Academy Image One"
             name: "academy_one"
             widget: "object"
             fields:
@@ -211,7 +250,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Academy Two"
+                default: "center center"
+
+          - label: "Academy Image Two"
             name: "academy_two"
             widget: "object"
             fields:
@@ -221,7 +262,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Studio Live"
+                default: "center center"
+
+          - label: "Studio — Live"
             name: "studio_live"
             widget: "object"
             fields:
@@ -231,7 +274,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Studio Art"
+                default: "center center"
+
+          - label: "Studio — Art"
             name: "studio_art"
             widget: "object"
             fields:
@@ -241,6 +286,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Artist"
             name: "artist"
             widget: "object"
@@ -251,7 +298,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Gallery People"
+                default: "center center"
+
+          - label: "Gallery — People"
             name: "gallery_people"
             widget: "object"
             fields:
@@ -261,7 +310,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Gallery Art"
+                default: "center center"
+
+          - label: "Gallery — Art"
             name: "gallery_art"
             widget: "object"
             fields:
@@ -271,7 +322,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Gallery Event"
+                default: "center center"
+
+          - label: "Gallery — Event"
             name: "gallery_event"
             widget: "object"
             fields:
@@ -281,7 +334,9 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
-          - label: "Gallery Corporate"
+                default: "center center"
+
+          - label: "Gallery — Corporate"
             name: "gallery_corporate"
             widget: "object"
             fields:
@@ -291,6 +346,8 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
+
           - label: "Booking"
             name: "booking"
             widget: "object"
@@ -301,3 +358,4 @@ collections:
               - label: "Position"
                 name: "position"
                 widget: "string"
+                default: "center center"
