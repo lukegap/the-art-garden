@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: lukegap/the-art-garden
-  branch: cloudfare-production
+  branch: main
   base_url: https://decap-auth.lukepounder1997.workers.dev
   auth_endpoint: auth
 
