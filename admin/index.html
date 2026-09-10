@@ -1,23 +1,218 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>The Art Garden — Editor</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Art Garden — art, nature and unforgettable experiences in Trinidad & Tobago.">
+<title>The Art Garden | Art. Nature. Experience.</title>
+<link rel="stylesheet" href="styles.css">
 
-  <link
-    href="/admin/config.yml"
-    type="text/yaml"
-    rel="cms-config-url"
-  >
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/icon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/icon-180.png">
+  <meta name="theme-color" content="#000000">
+
 </head>
 <body>
+<header class="site-header">
+  <a class="brand" href="#home" aria-label="The Art Garden home">
+    <span class="logo-crop"><img src="art-garden-logo.png" alt="The Art Garden logo"></span>
+  </a>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <nav>
+    <a href="#experiences">Experiences</a>
+    <a href="#events">Events</a>
+    <a href="#academy">Academy</a>
+    <a href="#private">Private Events</a>
+    <a href="#corporate">Corporate</a>
+    <a href="#studio">Studio</a>
+    <a href="#about">About</a>
+    <a class="nav-cta" id="nav-book-now" href="#events">BOOK NOW</a>
+  </nav>
+</header>
 
-  <script
-    defer
-    src="https://unpkg.com/decap-cms@3.10.1/dist/decap-cms.js"
-  ></script>
+<main id="home">
+<section class="hero">
+  <img class="hero-img" data-image-key="hero" src="IMG_1585.jpeg" alt="The Art Garden at night">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">TRINIDAD & TOBAGO</span>
+    <div class="hero-logo"><img src="art-garden-logo.png" alt="The Art Garden"></div>
+    <h1>ART. NATURE.<br><em>EXPERIENCE.</em></h1>
+    <p>Art, nature, culture and unforgettable experiences — all in one place.</p>
+    <div class="actions">
+      <a class="btn primary" href="#experiences">EXPLORE EXPERIENCES</a>
+      <a class="btn ghost" href="#events">UPCOMING EVENTS</a>
+    </div>
+  </div>
+</section>
 
+<section class="ticker">
+  <span>GOOD ART</span><span>GOOD PEOPLE</span><span>BRIGHTER DAYS</span>
+  <span>ART • MUSIC • FOOD • PEOPLE • NATURE • COMMUNITY</span>
+</section>
+
+<section id="events" class="section dark">
+  <div class="section-head">
+    <span class="eyebrow">WHAT'S HAPPENING</span>
+    <h2>THE NEXT<br><em>EXPERIENCE</em></h2>
+    <p>Discover what’s happening at The Art Garden.</p>
+  </div>
+  <div id="event-grid" class="event-grid"></div>
+</section>
+
+<section id="experiences" class="section">
+  <div class="section-head">
+    <span class="eyebrow">COME CREATE WITH US</span>
+    <h2>EXPERIENCES</h2>
+    <p>Painting, live music, private celebrations, learning and brand activations.</p>
+  </div>
+  <div class="experience-grid">
+    <article class="feature-card tall">
+      <img src="IMG_5763.jpeg" data-image-key="experience_people" alt="Guests holding their paintings at The Art Garden">
+      <div><span>ART EXPERIENCES</span><h3>Make something worth taking home.</h3><a href="#events">Explore events →</a></div>
+    </article>
+    <article class="feature-card">
+      <img src="IMG_2963.jpeg" data-image-key="experience_space" alt="Daytime painting setup inside The Art Garden">
+      <div><span>THE GARDEN</span><h3>A living studio surrounded by art and plants.</h3><a href="#private">Discover the space →</a></div>
+    </article>
+    <article class="feature-card">
+      <img src="IMG_9041.jpeg" data-image-key="experience_music" alt="Live music performance at The Art Garden">
+      <div><span>MUSIC & CULTURE</span><h3>Live sound, local talent and nights with energy.</h3><a href="#studio">See what happens here →</a></div>
+    </article>
+    <article class="feature-card">
+      <img src="IMG_8029.jpeg" data-image-key="experience_community" alt="Guests at a group painting experience">
+      <div><span>COMMUNITY</span><h3>Come as you are. Leave with a story.</h3><a href="#book">Book an experience →</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="private" class="split-section dark">
+  <div class="split-image"><img src="IMG_8544.jpeg" data-image-key="private_events" alt="Guests celebrating with artwork"></div>
+  <div class="split-copy">
+    <span class="eyebrow">PRIVATE EVENTS</span>
+    <h2>YOUR PEOPLE.<br>YOUR NIGHT.<br><em>YOUR GARDEN.</em></h2>
+    <p>Birthdays, celebrations, painting parties and custom experiences built around your people.</p>
+    <a class="btn primary" id="cta-private" href="#book">PLAN A PRIVATE EVENT</a>
+  </div>
+</section>
+
+<section id="corporate" class="section">
+  <div class="section-head">
+    <span class="eyebrow">BRANDS & BUSINESS</span>
+    <h2>CORPORATE<br><em>EXPERIENCES</em></h2>
+    <p>Creative team-building, brand activations and experiences people remember.</p>
+  </div>
+  <div class="corporate-grid">
+    <img src="685F956E-5AAB-46BF-B3B1-FA2C5230C740.jpeg" data-image-key="corporate" alt="The Art Garden corporate activation with Digicel">
+    <div class="corporate-copy">
+      <h3>Bring your brand into the Garden.</h3>
+      <p>We create art-led experiences, activations and content for brands, agencies and organisations.</p>
+      <ul>
+        <li>Team-building & creative workshops</li>
+        <li>Brand activations & experiential marketing</li>
+        <li>Private corporate events</li>
+        <li>Art direction, production & creative strategy</li>
+      </ul>
+      <a class="btn dark-btn" id="cta-corporate" href="#book">START A COLLABORATION</a>
+    </div>
+  </div>
+</section>
+
+<section id="academy" class="section dark">
+  <div class="academy-grid">
+    <div>
+      <span class="eyebrow">THE ART GARDEN ACADEMY</span>
+      <h2>CREATE.<br>LEARN.<br><em>EXPERIMENT.</em></h2>
+      <p>Hands-on art education and creative development for curious minds.</p>
+      <a class="btn primary" id="cta-academy" href="#book">ASK ABOUT CLASSES</a>
+    </div>
+    <div class="academy-images">
+      <img src="IMG_8554.jpeg" data-image-key="academy_one" alt="Young artist showing a portrait drawing">
+      <img src="IMG_8550.jpeg" data-image-key="academy_two" alt="Student with a completed portrait drawing">
+    </div>
+  </div>
+</section>
+
+<section id="studio" class="section">
+  <div class="section-head">
+    <span class="eyebrow">CREATIVE STUDIO</span>
+    <h2>MORE THAN<br>AN ART STUDIO.</h2>
+    <p>Creative direction, visual storytelling, design, video and experimental projects.</p>
+  </div>
+  <div class="studio-grid">
+    <div class="studio-photo"><img src="BD3182D8-50B3-4203-87F4-9224501A1D22.jpeg" data-image-key="studio_live" alt="Artist painting live"></div>
+    <div class="studio-photo"><img src="IMG_9008.jpeg" data-image-key="studio_art" alt="Artwork displayed at The Art Garden"></div>
+    <div class="studio-copy">
+      <span class="eyebrow">CREATIVE SERVICES</span>
+      <h3>Ideas become visual here.</h3>
+      <p>For brands, artists, organisations and bold ideas that need a creative partner.</p>
+      <a class="btn dark-btn" id="cta-studio" href="#book">WORK WITH THE STUDIO</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="artist-section dark">
+  <div class="artist-photo"><img src="IMG_9130.jpeg" data-image-key="artist" alt="Luke Pounder, artist and creative director"></div>
+  <div class="artist-copy">
+    <span class="eyebrow">THE ARTIST</span>
+    <h2>Luke<br><em>Pounder</em></h2>
+    <p>Artist. Creative director. Designer. Educator. Experience creator.</p>
+    <p>Luke brings art, design, music, culture, nature and storytelling together to create distinctive work and experiences.</p>
+    <div class="talent-list">
+      <span>Painting & Illustration</span><span>Art Direction</span><span>Branding & Design</span>
+      <span>Creative Strategy</span><span>Video & Production</span><span>Workshops</span>
+    </div>
+    <p class="collab">Have a project, commission, brand activation, creative idea or collaboration in mind?</p>
+    <a class="btn primary" id="cta-collaborate" href="#book">COLLABORATE</a>
+  </div>
+</section>
+
+<section class="gallery-strip">
+  <img src="IMG_5763.jpeg" data-image-key="gallery_people" alt="The Art Garden guests with paintings">
+  <img src="IMG_9008.jpeg" data-image-key="gallery_art" alt="Artwork at The Art Garden">
+  <img src="IMG_9025.jpeg" data-image-key="gallery_event" alt="Audience at The Art Garden">
+  <img src="685F956E-5AAB-46BF-B3B1-FA2C5230C740.jpeg" data-image-key="gallery_corporate" alt="Corporate activation">
+</section>
+
+<section id="book" class="booking">
+  <img src="IMG_1585.jpeg" data-image-key="booking" alt="" class="booking-bg">
+  <div class="booking-overlay"></div>
+  <div class="booking-content">
+    <div class="small-logo"><img src="art-garden-logo.png" alt="The Art Garden"></div>
+    <span class="eyebrow">READY TO CREATE?</span>
+    <h2>BOOK<br><em>THE GARDEN.</em></h2>
+    <p>Choose an event, plan a private experience or start a creative collaboration.</p>
+    <div class="actions">
+      <a class="btn primary" id="main-booking-link" href="https://theart.garden/" target="_blank" rel="noopener">BOOK AN EXPERIENCE</a>
+      <a class="btn ghost" href="mailto:theartgardentt@gmail.com">EMAIL US</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand">
+    <span class="logo-crop"><img src="art-garden-logo.png" alt="The Art Garden logo"></span>
+    <p>ART. NATURE. EXPERIENCE.</p>
+  </div>
+  <div>
+    <strong>CONTACT</strong>
+    <a href="tel:+18682904271" id="site-phone">+1 (868) 290-4271</a>
+    <a href="mailto:theartgardentt@gmail.com" id="site-email">theartgardentt@gmail.com</a>
+  </div>
+  <div>
+    <strong>EXPLORE</strong>
+    <a href="#events">Events</a><a href="#academy">Academy</a><a href="#corporate">Corporate</a><a href="#about">About the Artist</a>
+  </div>
+  <div>
+    <strong>FOLLOW</strong>
+    <a href="https://instagram.com/REPLACE_WITH_HANDLE" target="_blank" rel="noopener" id="social-instagram">Instagram ↗</a><a href="https://facebook.com/REPLACE_WITH_PAGE" target="_blank" rel="noopener" id="social-facebook">Facebook ↗</a><a href="https://tiktok.com/@REPLACE_WITH_HANDLE" target="_blank" rel="noopener" id="social-tiktok">TikTok ↗</a><a href="https://wa.me/18682904271" target="_blank" rel="noopener" id="social-whatsapp">WhatsApp ↗</a>
+  </div>
+</footer>
+<div class="copyright">© <span id="year"></span> THE ART GARDEN. ALL RIGHTS RESERVED.</div>
+
+<script src="script.js"></script>
 </body>
 </html>
