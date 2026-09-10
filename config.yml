@@ -47,3 +47,9 @@ collections:
           - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
           - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
           - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }
+          - { label: "Book Now URL", name: "bookNowUrl", widget: "string", required: false }
+          - { label: "Private Events URL", name: "privateEventsUrl", widget: "string", required: false }
+          - { label: "Corporate URL", name: "corporateUrl", widget: "string", required: false }
+          - { label: "Academy URL", name: "academyUrl", widget: "string", required: false }
+          - { label: "Studio URL", name: "studioUrl", widget: "string", required: false }
+          - { label: "Collaboration URL", name: "collaborateUrl", widget: "string", required: false }

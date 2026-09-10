@@ -34,7 +34,9 @@ function renderEvents(data) {
     eventGrid.appendChild(card);
   });
 
-  document.querySelector("#main-booking-link").href = activeEvents[0]?.bookingUrl || "#events";
+  const firstEventUrl = activeEvents[0]?.bookingUrl || "#events";
+  const mainBooking = document.querySelector("#main-booking-link");
+  if (mainBooking) mainBooking.href = firstEventUrl;
 }
 
 function renderSettings(settings) {
@@ -56,6 +58,25 @@ function renderSettings(settings) {
     emailEl.href = `mailto:${email}`;
   }
   if (waEl && settings.whatsapp) waEl.href = settings.whatsapp;
+
+  const linkMap = [
+    ["nav-book-now", settings.bookNowUrl],
+    ["cta-private", settings.privateEventsUrl],
+    ["cta-corporate", settings.corporateUrl],
+    ["cta-academy", settings.academyUrl],
+    ["cta-studio", settings.studioUrl],
+    ["cta-collaborate", settings.collaborateUrl]
+  ];
+  linkMap.forEach(([id, url]) => {
+    const el = document.querySelector(`#${id}`);
+    if (el && url) {
+      el.href = url;
+      if (/^https?:\/\//i.test(url)) {
+        el.target = "_blank";
+        el.rel = "noopener";
+      }
+    }
+  });
 
   const socialMap = [
     ["social-instagram", settings.instagram],

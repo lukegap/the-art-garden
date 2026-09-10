@@ -1,29 +1,38 @@
 # The Art Garden — Netlify + No-Code Editor
 
-## What this version does
-- Uses the supplied transparent Art Garden PNG logo.
-- Uses real event photography instead of event poster graphics.
-- Keeps the site lightweight and static.
-- Adds a Decap CMS editor at `/admin/`.
-- Events can be added, removed, reordered, hidden, photographed, priced and linked without editing HTML/JavaScript.
-- Phone, email, WhatsApp and social links can be changed from Site Settings.
+This is the production-ready static site package.
 
-## One-time CMS setup
-This package uses Decap CMS with the GitHub backend and the `lukegap/the-art-garden` repository.
+## Public site
+- `index.html` — website
+- `styles.css` — design
+- `script.js` — content loader and link wiring
+- `events.json` — editable event data
+- `site-settings.json` — editable contact, social and CTA links
+- `uploads/` — event photos
+- `art-garden-logo.png` — transparent Art Garden logo
+- `admin/` — Decap CMS editor
 
-After the site is deployed to Netlify:
-1. Configure GitHub as an OAuth authentication provider in Netlify.
-2. Visit `https://YOUR-SITE/admin/`.
-3. Sign in with the GitHub account that has write access to the repository.
-4. Use Events and Site Settings from the left sidebar.
-5. Click Publish. Decap writes the change to GitHub and Netlify automatically redeploys the site.
+## Netlify
+- Build command: leave blank
+- Publish directory: `.`
+- Branch: `main`
 
-## Netlify build
-Build command: blank
-Publish directory: `.`
+## No-code editing
+Once Decap authentication is configured, visit `/admin/`.
+Edit Events or Site Settings, then Publish. Netlify will redeploy from GitHub automatically.
 
-## Current editable event photos
-- Neon Nights: `/uploads/neon-nights-event.jpeg`
-- Artist(e) Zone: `/uploads/artist-zone-live-music.jpeg`
+## Editable links
+Site Settings controls:
+- Book Now
+- Private Events
+- Corporate
+- Academy
+- Studio
+- Collaboration
+- Phone, email, WhatsApp
+- Instagram, Facebook, TikTok
 
-The event poster graphics are no longer used in the event cards.
+The event editor controls each event's own registration/booking URL.
+
+
+Favicon: The supplied transparent Art Garden logo is used for browser tabs and Apple touch icons.

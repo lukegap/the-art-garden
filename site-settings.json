@@ -4,5 +4,11 @@
   "whatsapp": "https://wa.me/18682904271",
   "instagram": "",
   "facebook": "",
-  "tiktok": ""
+  "tiktok": "",
+  "bookNowUrl": "#events",
+  "privateEventsUrl": "https://wa.me/18682904271?text=Hi%20The%20Art%20Garden%2C%20I%27d%20like%20to%20enquire%20about%20a%20private%20event.",
+  "corporateUrl": "https://wa.me/18682904271?text=Hi%20The%20Art%20Garden%2C%20I%27d%20like%20to%20enquire%20about%20a%20corporate%20event%20or%20activation.",
+  "academyUrl": "mailto:theartgardentt@gmail.com?subject=Art%20Garden%20Academy%20Enquiry",
+  "studioUrl": "mailto:theartgardentt@gmail.com?subject=Art%20Garden%20Studio%20Enquiry",
+  "collaborateUrl": "mailto:theartgardentt@gmail.com?subject=Art%20Garden%20Collaboration"
 }
