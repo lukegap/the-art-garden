@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: lukegap/the-art-garden
-  branch: main
+  branch: cloudflare-production
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -21,17 +21,31 @@ collections:
             name: "events"
             widget: "list"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Time", name: "time", widget: "string", required: false }
-              - { label: "Location", name: "location", widget: "string", required: false }
-              - { label: "Price", name: "price", widget: "string", required: false }
-              - { label: "Image", name: "image", widget: "image" }
-              - label: "Image Position"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Subtitle"
+                name: "subtitle"
+                widget: "string"
+                required: false
+              - label: "Date"
+                name: "date"
+                widget: "string"
+              - label: "Time"
+                name: "time"
+                widget: "string"
+              - label: "Location"
+                name: "location"
+                widget: "string"
+              - label: "Price"
+                name: "price"
+                widget: "string"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Image position"
                 name: "position"
                 widget: "select"
-                default: "center center"
                 options:
                   - "left top"
                   - "center top"
@@ -42,34 +56,77 @@ collections:
                   - "left bottom"
                   - "center bottom"
                   - "right bottom"
-              - { label: "Booking URL", name: "bookingUrl", widget: "string", required: false }
-              - { label: "Active", name: "active", widget: "boolean", default: true }
+                default: "center center"
+              - label: "Booking URL"
+                name: "bookingUrl"
+                widget: "string"
+                required: false
+              - label: "Active"
+                name: "active"
+                widget: "boolean"
+                default: true
 
-  - name: "site_settings"
+  - name: "site-settings"
     label: "Site Settings"
     files:
-      - name: "site_settings"
+      - name: "settings"
         label: "Site Settings"
         file: "site-settings.json"
         format: "json"
         fields:
-          - { label: "Phone", name: "phone", widget: "string", required: false }
-          - { label: "Email", name: "email", widget: "string", required: false }
-          - { label: "WhatsApp", name: "whatsapp", widget: "string", required: false }
-          - { label: "Instagram", name: "instagram", widget: "string", required: false }
-          - { label: "Facebook", name: "facebook", widget: "string", required: false }
-          - { label: "TikTok", name: "tiktok", widget: "string", required: false }
-          - { label: "Book Now URL", name: "bookNowUrl", widget: "string", required: false }
-          - { label: "Private Events URL", name: "privateEventsUrl", widget: "string", required: false }
-          - { label: "Corporate URL", name: "corporateUrl", widget: "string", required: false }
-          - { label: "Academy URL", name: "academyUrl", widget: "string", required: false }
-          - { label: "Studio URL", name: "studioUrl", widget: "string", required: false }
-          - { label: "Collaborate URL", name: "collaborateUrl", widget: "string", required: false }
+          - label: "Phone"
+            name: "phone"
+            widget: "string"
+            required: false
+          - label: "Email"
+            name: "email"
+            widget: "string"
+            required: false
+          - label: "WhatsApp"
+            name: "whatsapp"
+            widget: "string"
+            required: false
+          - label: "Instagram"
+            name: "instagram"
+            widget: "string"
+            required: false
+          - label: "Facebook"
+            name: "facebook"
+            widget: "string"
+            required: false
+          - label: "TikTok"
+            name: "tiktok"
+            widget: "string"
+            required: false
+          - label: "Book Now URL"
+            name: "bookNowUrl"
+            widget: "string"
+            required: false
+          - label: "Private Events URL"
+            name: "privateEventsUrl"
+            widget: "string"
+            required: false
+          - label: "Corporate URL"
+            name: "corporateUrl"
+            widget: "string"
+            required: false
+          - label: "Academy URL"
+            name: "academyUrl"
+            widget: "string"
+            required: false
+          - label: "Studio URL"
+            name: "studioUrl"
+            widget: "string"
+            required: false
+          - label: "Collaborate URL"
+            name: "collaborateUrl"
+            widget: "string"
+            required: false
 
   - name: "photos"
     label: "Photos & Cropping"
     files:
-      - name: "photos"
+      - name: "images"
         label: "Photos & Cropping"
         file: "site-images.json"
         format: "json"
@@ -78,101 +135,169 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 55%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Experience — People"
             name: "experience_people"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 72%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Experience — Space"
             name: "experience_space"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 50%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Experience — Music"
             name: "experience_music"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 55%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Experience — Community"
             name: "experience_community"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 62%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Private Events"
             name: "private_events"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 58%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Corporate"
             name: "corporate"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 78%" }
-          - label: "Academy — One"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Academy One"
             name: "academy_one"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 52%" }
-          - label: "Academy — Two"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Academy Two"
             name: "academy_two"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 52%" }
-          - label: "Studio — Live"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Studio Live"
             name: "studio_live"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 58%" }
-          - label: "Studio — Art"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Studio Art"
             name: "studio_art"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 50%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Artist"
             name: "artist"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 45%" }
-          - label: "Gallery — People"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Gallery People"
             name: "gallery_people"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 72%" }
-          - label: "Gallery — Art"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Gallery Art"
             name: "gallery_art"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 50%" }
-          - label: "Gallery — Event"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Gallery Event"
             name: "gallery_event"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 60%" }
-          - label: "Gallery — Corporate"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
+          - label: "Gallery Corporate"
             name: "gallery_corporate"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 78%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
           - label: "Booking"
             name: "booking"
             widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Position", name: "position", widget: "string", default: "center 55%" }
+              - label: "Image"
+                name: "image"
+                widget: "image"
+              - label: "Position"
+                name: "position"
+                widget: "string"
