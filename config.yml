@@ -1,0 +1,49 @@
+backend:
+  name: github
+  repo: lukegap/the-art-garden
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "events"
+    label: "Events"
+    description: "Add, remove and update the events shown on the website."
+    files:
+      - label: "Upcoming Events"
+        name: "events"
+        file: "events.json"
+        fields:
+          - label: "Events"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.date}}"
+            collapsed: true
+            fields:
+              - { label: "Event Name", name: "title", widget: "string" }
+              - { label: "Short Description", name: "subtitle", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Time", name: "time", widget: "string" }
+              - { label: "Location", name: "location", widget: "string", default: "The Art Garden" }
+              - { label: "Price", name: "price", widget: "string" }
+              - { label: "Event Photo", name: "image", widget: "image", media_folder: "/uploads", public_folder: "/uploads" }
+              - { label: "Registration / Booking Link", name: "bookingUrl", widget: "string", required: false }
+              - { label: "Show on Website", name: "active", widget: "boolean", default: true }
+
+  - name: "site"
+    label: "Site Settings"
+    description: "Update contact details and social links without touching the website code."
+    files:
+      - label: "Contact & Socials"
+        name: "settings"
+        file: "site-settings.json"
+        fields:
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "WhatsApp Link", name: "whatsapp", widget: "string" }
+          - { label: "Instagram URL", name: "instagram", widget: "string", required: false }
+          - { label: "Facebook URL", name: "facebook", widget: "string", required: false }
+          - { label: "TikTok URL", name: "tiktok", widget: "string", required: false }

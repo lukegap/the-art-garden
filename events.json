@@ -1,24 +1,26 @@
-[
-  {
-    "title": "Neon Nights",
-    "subtitle": "Glow in the Dark Puff & Paint",
-    "date": "Saturday 19th September",
-    "time": "7:30 PM – 12:00 AM",
-    "location": "The Art Garden",
-    "price": "$200",
-    "image": "IMG_9448.png",
-    "bookingUrl": "https://theart.garden/",
-    "active": true
-  },
-  {
-    "title": "Artist(e) Zone",
-    "subtitle": "Music, Art, Magic & More",
-    "date": "Saturday 26th September",
-    "time": "7:30 PM – 12:00 AM",
-    "location": "The Art Garden",
-    "price": "$250",
-    "image": "IMG_9450.png",
-    "bookingUrl": "https://theart.garden/",
-    "active": true
-  }
-]
+{
+  "events": [
+    {
+      "title": "Neon Nights",
+      "subtitle": "Glow in the Dark Puff & Paint",
+      "date": "Saturday 19th September",
+      "time": "7:30 PM – 12:00 AM",
+      "location": "The Art Garden",
+      "price": "$200",
+      "image": "/uploads/neon-nights-event.jpeg",
+      "bookingUrl": "https://theart.garden/",
+      "active": true
+    },
+    {
+      "title": "Artist(e) Zone",
+      "subtitle": "Music, Art, Magic & More",
+      "date": "Saturday 26th September",
+      "time": "7:30 PM – 12:00 AM",
+      "location": "The Art Garden",
+      "price": "$250",
+      "image": "/uploads/artist-zone-live-music.jpeg",
+      "bookingUrl": "https://theart.garden/",
+      "active": true
+    }
+  ]
+}
