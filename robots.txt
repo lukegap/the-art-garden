@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Sitemap: https://theart.garden/sitemap.xml
+Sitemap: https://www.theart.garden/sitemap.xml
