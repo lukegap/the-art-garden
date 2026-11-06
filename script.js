@@ -9,8 +9,14 @@ function safeUrl(value) {
 
 function renderEvents(data) {
   const eventGrid = document.querySelector("#event-grid");
+  if (!eventGrid) return;
   const events = Array.isArray(data) ? data : (data?.events || []);
-  const activeEvents = events.filter(e => e.active !== false);
+  const now = new Date();
+  // Keep an event visible through its event date; hide it automatically afterwards.
+  const activeEvents = events.filter(event =>
+    event.active !== false &&
+    (!event.eventDate || new Date(`${event.eventDate}T23:59:59`) >= now)
+  );
   eventGrid.innerHTML = "";
 
   activeEvents.forEach(event => {
@@ -34,10 +40,6 @@ function renderEvents(data) {
       </div>`;
     eventGrid.appendChild(card);
   });
-
-  const firstEventUrl = activeEvents[0]?.bookingUrl || "#events";
-  const mainBooking = document.querySelector("#main-booking-link");
-  if (mainBooking) mainBooking.href = firstEventUrl;
 }
 
 function renderSettings(settings) {
@@ -62,6 +64,7 @@ function renderSettings(settings) {
 
   const linkMap = [
     ["nav-book-now", settings.bookNowUrl],
+    ["main-booking-link", settings.bookNowUrl],
     ["cta-private", settings.privateEventsUrl],
     ["cta-corporate", settings.corporateUrl],
     ["cta-academy", settings.academyUrl],
@@ -111,12 +114,13 @@ fetch(SETTINGS_URL)
   .then(renderSettings)
   .catch(err => console.error(err));
 
-document.querySelector("#year").textContent = new Date().getFullYear();
+const yearEl = document.querySelector("#year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 const header = document.querySelector(".site-header");
-document.querySelector(".menu-toggle").addEventListener("click", () => header.classList.toggle("open"));
-document.querySelectorAll(".site-header nav a").forEach(a => a.addEventListener("click", () => header.classList.remove("open")));
-
+const menuToggle = document.querySelector(".menu-toggle");
+if (header && menuToggle) menuToggle.addEventListener("click", () => header.classList.toggle("open"));
+document.querySelectorAll(".site-header nav a").forEach(a => a.addEventListener("click", () => header?.classList.remove("open")));
 
 fetch(IMAGES_URL)
   .then(r => r.ok ? r.json() : Promise.reject(new Error("Could not load site-images.json")))
